@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@contentchef/contentchef-node": "^2.1.0",
+    "cloudinary-core": "^2.8.2",
     "compression": "^1.7.1",
     "polka": "next",
     "sirv": "^0.4.0"

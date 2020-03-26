@@ -10,6 +10,7 @@
         display: flex;
         box-shadow: 10px 7px 9px 4px #ccc;
         margin-bottom: 30px;
+        height: 200px;
     }
 
     .right-container {
@@ -39,7 +40,7 @@
     </div>
     <div class="right-container">
         <h2>{title}</h2>
-        <p>{url}</p>
+        <p><a href={url}>{url}</a></p>
         <p>{description}</p>
     </div>
 </div>

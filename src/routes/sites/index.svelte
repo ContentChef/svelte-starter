@@ -1,17 +1,16 @@
 <script context="module">
 	import {onlineChannel} from '../../contentChef.js';
-	import {createUrl} from '../../cloudinary.js';
 
 	export async function preload(page, session) {
 		const response = await onlineChannel.search({contentDefinition: 'top-site', skip: 0, take: 100});
-		return { sites: response.data.items, createUrl };
+		return { sites: response.data.items };
 	}
 </script>
 
 <script>
 	import Card from '../../components/Card.svelte';
+	import {createUrl} from '../../cloudinary.js';
 	export let sites;
-	export let createUrl;
 </script>
 
 <style>
