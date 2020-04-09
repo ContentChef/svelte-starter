@@ -12,7 +12,7 @@ import { configure } from '@contentchef/contentchef-node';
 
 const client = configure({
     spaceId: '<YOUR_SPACEID>'
-}, '<TARGETDATE>'); 
+}); 
 
 export const onlineChannel = client.onlineChannel('<YOUR_ONLINE_API_KEY>', '<YOUR_CHANNEL>');
 ```
