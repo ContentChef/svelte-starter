@@ -3,14 +3,13 @@
 
     export async function preload({params, query}) {
         const response = await onlineChannel.content({publicId: params.slug});
-        return { site: response.data.payload, cloudName: response.data.requestContext.cloudName };
+        return { site: response.data.payload };
     }
 </script>
 
 <script>
-    import { createUrl } from '../../cloudinary.js';
+    import {getImageUrl} from '../../contentChef.js';
     export let site;
-    export let cloudName;
 </script>
 
 <style>
@@ -31,7 +30,7 @@
         {site.title}
     </h1>
 
-    <img src={createUrl(site.image, cloudName)} alt="alt"/>
+    <img src={getImageUrl(site.image)} alt="alt"/>
 
     <a href={site.url}>
         {site.url}

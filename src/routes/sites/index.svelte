@@ -9,7 +9,7 @@
 
 <script>
 	import Card from '../../components/Card.svelte';
-	import {createUrl} from '../../cloudinary.js';
+	import {getImageUrl} from '../../contentChef.js';
 	export let sites;
 </script>
 
@@ -46,7 +46,7 @@
 <figure>
 	{#each sites as site}
 		<a rel="prefetch" href="/sites/{site.publicId}">
-			<Card thumbnail={createUrl(site.payload.image, site.requestContext.cloudName)} title={site.payload.title} url={site.payload.url} description={site.payload.description} />
+			<Card thumbnail={getImageUrl(site.payload.image)} title={site.payload.title} url={site.payload.url} description={site.payload.description} />
 		</a>
 	{/each}
 </figure>

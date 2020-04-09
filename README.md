@@ -11,12 +11,10 @@ npm install # or yarn
 import { configure } from '@contentchef/contentchef-node';
 
 const client = configure({
-    apiKey: '<YOUR_API_KEY>',
-    host: '<CONTENTCHEF_HOST>',
     spaceId: '<YOUR_SPACEID>'
 }, '<TARGETDATE>'); 
 
-export const onlineChannel = client.onlineChannel('<YOUR_CHANNEL>');
+export const onlineChannel = client.onlineChannel('<YOUR_ONLINE_API_KEY>', '<YOUR_CHANNEL>');
 ```
 * and then run the following command
 ```zsh
