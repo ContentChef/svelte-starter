@@ -1,4 +1,5 @@
-import { configure, createUrl } from '@contentchef/contentchef-node';
+import { configure } from '@contentchef/contentchef-node';
+import { createUrl } from '@contentchef/contentchef-media';
 
 const client = configure({
     spaceId: '<YOUR_SPACEID>'
